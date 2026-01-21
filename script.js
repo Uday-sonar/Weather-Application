@@ -1,6 +1,13 @@
 const apiKey = "4a37d5ccba42cbe97bd8d6e6e064a213"; // replace with your OpenWeatherMap API key
 
 //const apiKey = "YOUR_VALID_API_KEY";
+document.addEventListener("DOMContentLoaded", () => {
+    const btn = document.getElementById("weatherBtn");
+    if (btn) {
+        btn.addEventListener("click", getWeather);
+    }
+});
+
 
 async function getWeather() {
     const city = document.getElementById("cityInput").value.trim();
@@ -140,3 +147,4 @@ function renderChart(labels, temps) {
         }
     });
 }
+
